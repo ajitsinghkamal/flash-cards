@@ -1,0 +1,40 @@
+---
+import Button from "./Button.astro";
+---
+
+<form id="user-name" is="welcome-form">
+	<label for="user"
+		>Before you embark on this journey, what should we call you?</label
+	>
+	<input placeholder="Add your first name" id="user" name="user" />
+	<Button variant="primary">Save</Button>
+</form>
+
+<style>
+	form {
+		display: flex;
+		flex-flow: column nowrap;
+		margin-block: 1em;
+
+		label {
+			margin-bottom: 1em;
+		}
+
+		input {
+			margin-bottom: 2em;
+		}
+	}
+</style>
+
+<script>
+	class WelcomeForm extends HTMLFormElement {
+		constructor() {
+			super();
+			this.addEventListener("submit", (event) => {
+				event.preventDefault();
+				console.log(event);
+			});
+		}
+	}
+	customElements.define("welcome-form", WelcomeForm, { extends: "form" });
+</script>

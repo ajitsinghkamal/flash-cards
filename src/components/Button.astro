@@ -1,0 +1,47 @@
+---
+type Variant = "primary" | "secondary" | null;
+
+interface Props {
+	variant: Variant;
+}
+
+const { variant } = Astro.props;
+---
+
+<button is="o-button" data-variant={variant}>
+	<slot />
+</button>
+
+<style>
+	button[data-variant="primary"] {
+		background: var(--primary);
+	}
+</style>
+
+<script>
+	class OrcaButton extends HTMLButtonElement {
+		constructor() {
+			super();
+			this.addEventListener("click", (event) => {
+				console.log("click");
+			});
+		}
+
+		static get observedAttributes() {
+			return ["variant"];
+		}
+
+		get variant() {
+			return this.getAttribute("data-variant");
+		}
+
+		set variant(val: string | null) {
+			if (val) {
+				this.setAttribute("data-variant", val);
+			} else {
+				this.removeAttribute("data-variant");
+			}
+		}
+	}
+	customElements.define("o-button", OrcaButton, { extends: "button" });
+</script>
