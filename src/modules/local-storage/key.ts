@@ -1,0 +1,2 @@
+export const USER_NAME_KEY = "PREFERRED_NAME";
+export const USER_THEME_KEY = "APPLIED_THEME";
