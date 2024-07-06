@@ -5,14 +5,16 @@
 	},
 	"formatter": {
 		"indentStyle": "tab",
-		"indentWidth": 4
+		"indentWidth": 2
 	},
 	"javascript": {
 		"globals": ["Astro"],
 		"formatter": {
 			"bracketSpacing": true,
 			"semicolons": "always",
-			"trailingCommas": "all"
+			"trailingCommas": "all",
+			"indentStyle": "tab",
+			"indentWidth": 2
 		}
 	},
 	"linter": {

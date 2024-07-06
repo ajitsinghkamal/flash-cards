@@ -1,10 +1,10 @@
 pre-commit:
   commands:
-    html:
-      glob: "*.astro"
-      run: npx prettier --ignore-unknown --write {staged_files}
+    prettify:
+      glob: "*.{astro,css}"
+      run: pnpm prettier --ignore-unknown --write {staged_files}
       stage_fixed: true
-    format:
+    check:
       glob: "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc,astro}"
-      run: npx @biomejs/biome check --write --no-errors-on-unmatched --files-ignore-unknown=true {staged_files}
+      run: pnpm biome check --write --no-errors-on-unmatched --files-ignore-unknown=true {staged_files}
       stage_fixed: true

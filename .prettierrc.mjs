@@ -9,7 +9,7 @@ export default {
 				parser: "astro",
 				useTabs: true,
 				semi: true,
-				tabWidth: 4,
+				tabWidth: 2,
 			},
 		},
 	],
