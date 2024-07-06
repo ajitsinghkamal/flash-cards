@@ -1,7 +1,39 @@
-:root {
-	--ft-text: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-}
+@import url(design-tokens.css);
 
 body {
-	font: 1rem/1.625 var(--ft-text);
+  font: 1rem/1.625 var(--ft-text);
+  background: var(--ebony-clay);
+  color: var(--tusk);
+
+  --primary: var(--aquamarine);
+  --secondary: var(--marigold);
+  --accent: var(--hit-pink);
+
+  &.light {
+    background: var(--gray);
+    color: var(--ebony-clay);
+
+    --primary: var(--madang-green);
+    --secondary: var(--orchid);
+    --accent: var(--oyster-pink);
+  }
+}
+
+button,
+textarea,
+input {
+  border: none;
+  font: inherit;
+  border-radius: var(--radius);
+}
+
+button {
+  padding: var(--sz-2);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+textarea,
+input {
+  padding: var(--sz-2);
 }
