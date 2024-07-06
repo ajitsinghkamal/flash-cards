@@ -7,7 +7,7 @@ body {
 
   --primary: var(--aquamarine);
   --secondary: var(--marigold);
-  --accent: var(--hit-pink);
+  --accent: var(--peep);
 
   &.light {
     background: var(--gray);
@@ -19,7 +19,6 @@ body {
   }
 }
 
-/* Balance text wrapping on headings */
 h1,
 h2,
 h3,
@@ -33,8 +32,6 @@ input {
 button,
 textarea,
 input {
-  border: none;
-  font-size: inherit;
   border-radius: var(--radius);
 }
 
@@ -47,4 +44,8 @@ button {
 textarea,
 input {
   padding: var(--sz-2);
+}
+
+label {
+  margin-bottom: 0.275em;
 }

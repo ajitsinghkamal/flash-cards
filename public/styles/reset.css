@@ -51,6 +51,14 @@ h4 {
   text-wrap: balance;
 }
 
+/* remove default borders and font settings */
+button,
+textarea,
+input {
+  border: none;
+  font-size: inherit;
+}
+
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
