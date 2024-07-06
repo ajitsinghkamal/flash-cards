@@ -1,6 +1,9 @@
 :root {
-  --ft-text: "Book", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+  --ft-fam: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+  --ft-fam-book: "Petrona", var(--ft-fam);
+  --ft-fam-title: "Overpass", var(--ft-fam);
 
   /* scale */
   --sz-1: 8px;
@@ -18,6 +21,7 @@
 
   --ebony-clay: lab(20.45 -0.14 -10.15);
   --orchid: lab(62.34 43.14 -53.25);
+  --link-water: lab(86.38 -1.24 -14.34);
 
   --aquamarine: lab(88.47 -47.24 15.47);
   --madang-green: lab(88.76 -37.82 28.99);

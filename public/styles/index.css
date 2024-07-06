@@ -1,9 +1,9 @@
 @import url(design-tokens.css);
 
 body {
-  font: 1rem/1.625 var(--ft-text);
+  font: 1rem/1.625 var(--ft-fam-book);
   background: var(--ebony-clay);
-  color: var(--tusk);
+  color: var(--link-water);
 
   --primary: var(--aquamarine);
   --secondary: var(--marigold);
@@ -19,11 +19,22 @@ body {
   }
 }
 
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4,
+button,
+textarea,
+input {
+  font-family: var(--ft-fam-title);
+}
+
 button,
 textarea,
 input {
   border: none;
-  font: inherit;
+  font-size: inherit;
   border-radius: var(--radius);
 }
 
