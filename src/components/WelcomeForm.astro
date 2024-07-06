@@ -3,9 +3,7 @@ import Button from "./Button.astro";
 ---
 
 <form id="user-name" is="welcome-form">
-	<label for="user"
-		>Before you embark on this journey, what should we call you?</label
-	>
+	<label for="user">But first, what should we call you?</label>
 	<input placeholder="Add your first name" id="user" name="user" />
 	<Button variant="primary">Save</Button>
 </form>
@@ -14,15 +12,7 @@ import Button from "./Button.astro";
 	form {
 		display: flex;
 		flex-flow: column nowrap;
-		margin-block: 1em;
-
-		label {
-			margin-bottom: 1em;
-		}
-
-		input {
-			margin-bottom: 2em;
-		}
+		font-size: 1.275rem;
 	}
 </style>
 
