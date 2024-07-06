@@ -1,0 +1,31 @@
+:root {
+  --ft-text: "Book", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+  /* scale */
+  --sz-1: 8px;
+  --sz-2: 16px;
+  --sz-3: 24px;
+  --sz-4: 32px;
+
+  /* palette */
+  --radius: 10px;
+
+  --gray: lab(97.13 -0.51 0.36);
+
+  --bright-ylw: lab(94.74 -17.62 92.26);
+  --marigold: lab(90.68 -6.22 54.24);
+
+  --ebony-clay: lab(20.45 -0.14 -10.15);
+  --orchid: lab(62.34 43.14 -53.25);
+
+  --aquamarine: lab(88.47 -47.24 15.47);
+  --madang-green: lab(88.76 -37.82 28.99);
+  --jonquil: lab(96.53 -21.85 41.99);
+  --tusk: lab(94.64 -9.53 17.81);
+
+  --oyster-pink: lab(87.36 9 3.3);
+  --hit-pink: lab(76.04 25.83 35.64);
+  --peep: lab(85.54 15.43 -1.44);
+  --crusta-orange: lab(69.15 35.23 57.4);
+}
