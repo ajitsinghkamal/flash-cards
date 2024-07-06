@@ -1,0 +1,53 @@
+---
+import Button from "./Button.astro";
+---
+
+<form id="user-name" is="input-user-name">
+	<label for="user">But first, what should we call you?</label>
+	<input placeholder="Add your name" id="user" name="user" />
+	<Button variant="primary">Save</Button>
+</form>
+
+<style>
+	form {
+		display: flex;
+		flex-flow: column nowrap;
+		font-size: 1.275rem;
+
+		input {
+			margin-bottom: var(--sz-3);
+		}
+	}
+</style>
+
+<script>
+	import { saveUserName } from "../modules/local-storage/service";
+
+	class InputUserName extends HTMLFormElement {
+		#inputField: HTMLInputElement | null = null;
+
+		constructor() {
+			super();
+			this.#inputField = this.querySelector("input[name=user]");
+
+			this.addEventListener("submit", this.handleSubmit);
+		}
+
+		handleSubmit(event: SubmitEvent) {
+			event.preventDefault();
+			const userName = this.getInputFieldValue();
+
+			if (userName) {
+				saveUserName(userName);
+			} else {
+				console.log(`sad  --- 😢`);
+			}
+		}
+
+		getInputFieldValue(): string {
+			return this.#inputField?.value ?? "";
+		}
+	}
+
+	customElements.define("input-user-name", InputUserName, { extends: "form" });
+</script>

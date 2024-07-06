@@ -33,9 +33,6 @@ const { variant } = Astro.props;
 	class OrcaButton extends HTMLButtonElement {
 		constructor() {
 			super();
-			this.addEventListener("click", (event) => {
-				console.log("click");
-			});
 		}
 
 		static get observedAttributes() {
