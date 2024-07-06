@@ -13,8 +13,19 @@ const { variant } = Astro.props;
 </button>
 
 <style>
+	button {
+		transition: outline 0.3s;
+	}
+
 	button[data-variant="primary"] {
 		background: var(--primary);
+	}
+
+	@media (hover: hover) {
+		button:hover {
+			outline: 2px solid currentColor;
+			outline-offset: -6px;
+		}
 	}
 </style>
 
